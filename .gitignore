@@ -1,0 +1,21 @@
+# File oggetto e eseguibili
+obj/
+bin/
+
+
+# File oggetto specifici
+*.o
+*.obj
+
+# File eseguibili
+*.exe
+*.out
+
+# File temporanei
+*.tmp
+*.bak
+*~
+
+# File di sistema
+.DS_Store
+Thumbs.db
