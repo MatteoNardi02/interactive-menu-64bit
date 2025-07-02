@@ -127,8 +127,9 @@ The module includes robust error handling:
 ## Project Structure
 
 ```
-project/
+64bit/
 ├── Makefile              # Build configuration
+├── .gitignore
 ├── src/
 │   └── menu.s           # Main assembly source file
 ├── obj/
