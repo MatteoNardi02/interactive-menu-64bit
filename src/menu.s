@@ -1,5 +1,5 @@
 .section .data
-    # roba per il terminale
+    # per il terminale
     clear_screen: .ascii "\x1B[H\x1B[J"
     colore_reset: .ascii "\x1B[0m"
     verde: .ascii "\x1B[32m"
@@ -40,7 +40,7 @@
 
 _start:
     call prepara_terminale
-    xor %r9, %r9      # selezione corrente (uso r9 invece di rdi)
+    xor %r9, %r9      # selezione corrente
 
 menu_loop:
     call disegna_tutto
@@ -58,7 +58,7 @@ menu_loop:
     cmp $0x0A, %al    # invio
     je handle_invio
     
-    # forse ha premuto direttamente 1-4?
+    # ha premuto direttamente 1-4
     cmp $'1', %al
     je vai_opzione1
     cmp $'2', %al
@@ -180,7 +180,6 @@ disegna_tutto:
     mov $4, %rdx
     syscall
     
-    # ora le opzioni
     xor %r8, %r8      # uso r8 invece di esi per il contatore
 
 loop_opzioni:
